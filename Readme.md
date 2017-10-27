@@ -24,4 +24,8 @@ bash start_cat.sh AIIYR
 
 ## Running the tests
 
-On your local machine run curl localhost:8888/cat and curl localhost:8888/hostory
+On your local machine run 
+
+```
+curl localhost:8888/cat and curl localhost:8888/history
+```
