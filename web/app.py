@@ -1,4 +1,4 @@
-import future,bs4,pymongo, xmltodict, json
+import future,bs4,pymongo, xmltodict, json, os
 import urllib2 as request
 
 from bson.json_util import dumps
@@ -17,7 +17,7 @@ except pymongo.errors.ConnectionFailure as e:
 db=connection.book
 record1 = db.book_collection1
 
-url="http://thecatapi.com/api/images/get?format=xml&results_per_page=1"
+url="http://thecatapi.com/api/images/get?format=xml&results_per_page=1&api_key=os.environ['API_KEY']"
 
 
 app = Flask(__name__)
