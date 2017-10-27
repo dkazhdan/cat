@@ -27,9 +27,10 @@ def cat():
 
     cat_response = request.urlopen(url) #get the url
     xml_doc = bs4.BeautifulSoup(cat_response.read(), "xml") #parse xml
+    # Form the JSON from XML
     string={'url': xml_doc.find('url').get_text(), 'id': xml_doc.find('id').get_text(), 'source_url': xml_doc.find('source_url').get_text()}
     my_json_string = json.dumps({"image": string})
-    #record1.drop()
+    #Insert the JSON into MongoDb
     record1.insert(string)
     return my_json_string + '\n'
 
