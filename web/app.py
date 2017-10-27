@@ -41,6 +41,9 @@ def index1():
     history= dumps({"images" : list(cursor)}) #serialize the string
     return history + '\n'
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return "Your endpoints have to be either /cat or /history\n"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',debug=True)
