@@ -20,7 +20,7 @@ All it takes to run the example is to check out the repo and run  start_cat.sh A
 Say what the step will be
 
 ```
-Give the example
+bash start_cat.sh AIIYR
 ```
 
 And repeat
